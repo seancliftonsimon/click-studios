@@ -1,0 +1,650 @@
+/*
+Fonts from google import in HTML
+font-family: 'Open Sans', sans-serif; // in 300 italic, 400 regular, 700 bold
+font-family: 'Playfair Display', serif; // in 700 bold
+font-family: 'Voltaire', sans-serif; // in regular 400
+*/
+/* SCSS HEX */
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100%; /* Set the height of the html and body to be 100% of the viewport */
+  width: 100%;
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+}
+
+/* COLORED BACKGROUNDS */
+.curtain {
+  background-color: #931621;
+}
+
+.silver {
+  background-color: #cfcfcf;
+}
+
+.golden.golden {
+  background-color: #fad01c;
+}
+
+.popcorn {
+  background-color: #fff5bf;
+}
+
+.black-text.black-text {
+  color: black;
+}
+
+.white-text.white-text {
+  color: white;
+}
+
+.wrapper {
+  padding: 10px 0 10px 0;
+}
+
+#divE1 {
+  margin-right: 20px;
+}
+
+#divD {
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: space-between;
+}
+
+#divD2 {
+  margin-left: 20px;
+}
+
+.money-container {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  flex: 1; /* Allows the div to expand */
+  width: 100%; /* Takes up full width of the parent */
+  padding: 10px; /* Adds padding around the content */
+  box-sizing: border-box; /* Includes padding in the width calculation */
+}
+
+/* FLEXBOX ORGANIZING */
+.vert {
+  display: flex; /* Use Flexbox */
+  flex-direction: column; /* Stack children vertically */
+  height: 100%; /* Take full container height */
+}
+
+.panel-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  flex: 3;
+}
+
+.horiz {
+  display: flex; /* Use Flexbox */
+  flex-direction: row; /* Stack children vertically */
+  height: 100%; /* Take full container height */
+}
+
+#customAlert {
+  border-radius: 8px;
+}
+
+#customPrompt {
+  border-radius: 8px;
+}
+
+.option-button {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #7a7a7a;
+  border: solid transparent;
+  border-radius: 8px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 5px 10px;
+  text-align: center;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  min-width: 120px;
+  width: 100%;
+}
+
+.option-button:after {
+  background-clip: padding-box;
+  background-color: #cfcfcf;
+  border: solid transparent;
+  border-radius: 8px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.option-button:main,
+.option-button:focus {
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+          user-select: auto;
+}
+
+.option-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.option-button:disabled {
+  cursor: auto;
+  border-width: 4px 0 0;
+  background: none;
+}
+
+.option-button:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+.option-text {
+  line-height: 2;
+  color: black;
+}
+
+#active-genre-bar-container {
+  display: flex;
+  width: calc(100% - 20px);
+  height: 60px;
+  align-self: center;
+  padding: 10px 10px 0 10px;
+}
+
+.progressbar {
+  background-color: #b28f94;
+  flex-grow: 1;
+  border-radius: 8px;
+}
+
+.active-genre-percentage {
+  white-space: nowrap;
+  text-align: left;
+  color: white;
+  font-family: "Arial", sans-serif;
+  background: #931621;
+  height: 100%;
+  font-size: 1.5em;
+  border-radius: 8px 0 0 8px;
+  transition: width 0.3s ease;
+}
+
+.half-width {
+  flex: 1;
+  flex-basis: 50%; /* or width: 50%; */
+}
+
+.half-part {
+  flex: 0.5;
+}
+
+.one-part {
+  flex: 1;
+}
+
+.two-part {
+  flex: 2;
+}
+
+.three-part {
+  flex: 3;
+}
+
+.five-part {
+  flex: 5;
+}
+
+.seven-part {
+  flex: 7;
+}
+
+.eight-part {
+  flex: 8;
+}
+
+.nine-part {
+  flex: 9;
+}
+
+.eleven-part {
+  flex: 11;
+}
+
+.thirteen-part {
+  flex: 13;
+}
+
+#divA {
+  height: 100vh; /* Full viewport height to match master-container */
+  position: sticky; /* Sticks to the top of the viewport when scrolling */
+  top: 0; /* Align to the top */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+#divB {
+  height: auto; /* Height based on content */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 0 10px;
+}
+
+/*CENTER TEXT*/
+.cT {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Ensure text within the div is centered as well */
+}
+
+.centerV {
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+
+.header {
+  align-content: flex-start;
+}
+
+#buy-tool {
+  align-self: center;
+}
+
+#game-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700; /* Set font weight to bold */
+  color: #fad01c; /* Set the text color to gold */
+  /* Text shadow to create a 3D effect with one highlight, one internal shadow, and one external shadow */
+  text-shadow: -2px -1px 1px rgb(255, 255, 255), 4px 6px 1px rgba(0, 0, 0, 0.3), 4px 4px 4px rgba(0, 0, 0, 0.2); /* Larger shadow for overall depth and external shadow */
+}
+
+#game-title span {
+  display: inline-block; /* For width calculation */
+}
+
+#word-count-text {
+  color: #931621;
+}
+
+#div2 {
+  font-family: "Voltaire", sans-serif;
+  font-size: 2em;
+  color: white;
+}
+
+.locked {
+  color: rgb(27, 27, 27);
+}
+
+#divC {
+  padding: 10px 0 10px 0;
+  height: 180px;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  margin: 5px 0 5px 0;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin: 0 0 0 5px;
+  color: black;
+}
+
+.write-button {
+  font-size: 6em;
+  cursor: pointer;
+  background: none;
+  transition: transform 0.1s ease;
+  height: 100%;
+  border: 0;
+  outline: none;
+}
+
+.write-button:hover {
+  transform: scale(1.05);
+}
+
+.write-button:active {
+  transform: scale(0.95);
+  filter: brightness(90%);
+}
+
+/*
+button[disabled] {
+	filter: brightness(70%);
+} */
+.buy-button {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #cfcfcf;
+  border: solid transparent;
+  border-radius: 8px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 5px 10px;
+  text-align: center;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter 0.2s;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.buy-button:after {
+  background-clip: padding-box;
+  background-color: #fff5bf;
+  border: solid transparent;
+  border-radius: 8px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.buy-button:main,
+.buy-button:focus {
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+          user-select: auto;
+}
+
+.buy-button:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.buy-button:disabled {
+  filter: brightness(0.8) contrast(0.8);
+  cursor: auto;
+  border-width: 4px 0 0;
+  background: none;
+}
+
+.buy-button:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+
+div.panel {
+  box-sizing: border-box; /* This makes sure margins are included in the width calculation */
+  margin: 0 5px 0 5px;
+  width: calc(100% - 10px); /* This calculates the width as full width minus the left and right margins */
+  background-color: white;
+  border-radius: 8px;
+  flex-grow: 1;
+  border: none;
+  align-self: center;
+  position: relative;
+  justify-content: space-around;
+}
+
+#writers-room-upgrade-panel {
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+}
+
+#writers-room-upgrade-button {
+  align-self: center;
+  margin: 10px 0 10px 0;
+  padding: 0;
+}
+
+#tool-upgrade {
+  height: 100%;
+}
+
+#tool-panel {
+  border-radius: 8px 0 0 8px;
+  margin-right: 2px;
+}
+
+#words-box {
+  border-radius: 0 8px 8px 0;
+  margin-left: 2px;
+}
+
+#change-genre-panel {
+  justify-content: center;
+  padding: 0 10px;
+}
+
+#change-genre-button {
+  height: calc(100% - 20px);
+  padding: 10px 0 10px 0;
+}
+
+.product {
+  box-sizing: border-box; /* This makes sure margins are included in the width calculation */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  border: none;
+  align-self: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.panel-header {
+  background-color: #313b72;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#tool-upgrade > .panel-header {
+  border-radius: 8px 0 0 0;
+}
+
+.section-header {
+  display: flex;
+  font-size: 1.2em;
+  height: 1.2em;
+  justify-content: space-between;
+  padding: 10px 0 10px 0;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-text {
+  text-align: right;
+}
+
+button {
+  height: 35px;
+  font-family: inherit;
+  font-size: inherit; /* Use the same font size as the surrounding text */
+  border: 0;
+}
+
+span.minor-icon {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+}
+
+#writers-room-upgrade-text {
+  align-self: center;
+  margin: 0;
+}
+
+.worker-description.worker-description {
+  color: #931621;
+  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  margin: 20px 0 -10px 0;
+}
+
+span.info {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.heading-counter {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  margin-right: 5px;
+}
+
+.promptHeading {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.alertHeading {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+
+.info-section {
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+}
+
+.alert-info {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-content: space-between;
+}
+
+.money {
+  color: #4caf50;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+#writers-room {
+  border: 2px dashed #313b72;
+  height: 6em;
+  width: 100%;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.455);
+  position: relative;
+}
+
+.words {
+  color: #931621;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+.cash {
+  background-color: #abd9ad;
+}
+
+.time {
+  background-color: #c28d95;
+}
+
+.subcounter {
+  font-family: "Open Sans", sans-serif;
+  line-height: 2em;
+  vertical-align: text-top;
+}
+
+span.purchase-count {
+  display: inline-block;
+  padding: 10px 0px 10px 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+#emoji-line > span {
+  font-size: 5em; /* Sets emoji size */
+  vertical-align: text-top;
+  line-height: 1.2em;
+}
+
+.panel-emoji {
+  font-size: 3.5em;
+  text-align: center;
+  padding: 10px 0;
+  flex: 2;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+}/*# sourceMappingURL=style.css.map */

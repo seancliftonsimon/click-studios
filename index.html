@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Studio</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300&family=Playfair+Display:wght@700&family=Voltaire&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	</head>
+	<body>
+		<!-- Custom Alert Box -->
+		<div id="customAlert" class="modal">
+			<div class="modal-content">
+				<h2 id="alertHeading">Alert Heading</h2>
+				<div class="alert-info">
+					<p id="alertBody" class="cT">This is the alert message.</p>
+					<button id="alertOkButton" class="option-button">OK</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Custom Prompt Box -->
+		<div id="customPrompt" class="modal">
+			<div class="modal-content">
+				<h2 id="promptHeading">Prompt Heading</h2>
+				<div class="alert-info">
+					<p id="promptBody" class="cT">This is the prompt message.</p>
+					<input type="text" id="promptInput" />
+					<br />
+					<div class="horiz cT">
+						<button id="promptCancelButton" class="option-button">
+							Cancel
+						</button>
+						<button id="promptOkButton" class="option-button">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="master-container" class="horiz">
+			<div id="divA" class="two-part vert curtain">
+				<div id="div1" class="two-part vert">
+					<div id="game-title" class="two-part cT">
+						<span id="title-span">Click Studios</span>
+					</div>
+					<div class="one-part golden wrapper centerV">
+						<div class="popcorn money-container">
+							<h2 class="res money">💵 $<span id="res-dollars">0</span></h2>
+						</div>
+					</div>
+				</div>
+				<div id="div2" class="seven-part vert">
+					<div id="writing" class="one-part cT">WRITING</div>
+					<div id="preproduction" class="one-part locked cT">PREPRODUCTION</div>
+					<div id="filming" class="one-part locked cT">FILMING</div>
+					<div id="postproduction" class="one-part locked cT">
+						POSTPRODUCTION
+					</div>
+					<div id="marketing" class="one-part locked cT">MARKETING</div>
+					<div id="release" class="one-part locked cT">RELEASE</div>
+					<div id="prestige" class="half-part locked cT">PRESTIGE</div>
+				</div>
+			</div>
+			<div id="divB" class="seven-part vert silver">
+				<div id="divC" class="horiz">
+					<div id="divC1" class="six-part cT">
+						<div class="panel">
+							<button id="write-button" class="write-button">✍️</button><br />
+							<span id="manual-words" class="subcounter cT"
+								>1 word per click</span
+							>
+						</div>
+					</div>
+					<div id="divC2" class="nine-part vert">
+						<div id="tool-panel" class="panel horiz hidden">
+							<div id="tool-box" class="one-part">
+								<div id="tool-upgrade" class="vert">
+									<div class="panel-header toggle-header golden">
+										<div class="left-text">
+											<h3 id="tool-heading" class="black-text">Typewriter</h3>
+										</div>
+									</div>
+									<div class="horiz">
+										<div id="tool-emoji" class="panel-emoji cT">📃</div>
+										<div class="panel-info five-part">
+											<div class="cT">
+												<span id="effect-tool" class="info words"
+													>Manual Writing Speed x4</span
+												>
+											</div>
+											<div class="cT">
+												<button id="buy-tool" class="money buy-button">
+													<span id="buy-typewriter-text">$60</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="divC3" class="thirteen-part horiz">
+						<div id="words-box" class="two-part panel vert">
+							<div id="word-count-text" class="one-part cT">
+								<h2><span id="res-words">0</span>&nbsp;words</h2>
+							</div>
+							<div id="automated-words" class="one-part subcounter cT hidden">
+								+0 words per second
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="divD" class="horiz">
+					<div id="divD1" class="two-part vert">
+						<div class="section-header horiz">
+							<div class="left-text"><h3 id="genre-heading">Genre</h3></div>
+							<div class="right-text">
+								<span
+									id="active-genre-level"
+									class="heading-counter right-text black-text"
+									>Level 1</span
+								>
+							</div>
+						</div>
+						<div class="panel vert">
+							<div id="active-genre-bar-container" class="five-part">
+								<div class="progressbar">
+									<div
+										id="active-genre-bar-progress"
+										class="active-genre-percentage"
+									>
+										🤣 Comedy
+									</div>
+								</div>
+							</div>
+							<div id="change-genre-panel" class="one-part">
+								<div class="vert cT">
+									<button id="change-genre-button" class="option-button cT">
+										<span class="option-text">Change Genre</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="divD2" class="three-part vert hidden">
+						<div class="section-header horiz">
+							<div class="left-text"><h3>Writers Room</h3></div>
+							<div class="right-text">
+								<span
+									id="writers-room-count"
+									class="heading-counter right-text black-text"
+									>0/3</span
+								>
+							</div>
+						</div>
+						<div id="writers-room-container" class="hidden">
+							<div id="writers-room">
+								<span id="emoji-line"></span>
+							</div>
+						</div>
+						<div id="writers-room-upgrade-panel" class="centerV horiz">
+							<div class="horiz">
+								<span class="minor-icon">🪑</span
+								><span id="writers-room-upgrade-text" class="info">
+									Capacity 3 → 6
+								</span>
+							</div>
+							<div>
+								<button
+									id="writers-room-upgrade-button"
+									class="money buy-button"
+								>
+									<span>$4000</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="divE" class="horiz">
+					<div id="divE1" class="two-part vert">
+						<div class="section-header"><h3 class="cT">Sell Stuff</h3></div>
+						<div id="logline-panel" class="product">
+							<div class="panel-header toggle-header">
+								<div class="left-text">
+									<h3 class="white-text">Logline</h3>
+								</div>
+								<div class="right-text">
+									<span class="heading-counter"
+										><span id="logline">0</span> sold</span
+									>
+								</div>
+							</div>
+							<!-- wrapper for header hiding toggle-->
+							<div class="horiz">
+								<div class="panel-emoji cT">💡</div>
+								<div class="panel-info">
+									<div class="cT">
+										<span class="info money" id="pay-logline"
+											>Get paid: $pay</span
+										>
+									</div>
+									<div class="cT">
+										<button class="words buy-button" id="sell-logline">
+											<span id="sell-logline-text"> Use 20 words</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="synopsis-panel" class="product hidden">
+							<div class="panel-header toggle-header">
+								<div class="left-text">
+									<h3 class="white-text">Synopsis</h3>
+								</div>
+								<div class="right-text">
+									<span class="heading-counter">
+										<span id="synopsis-count">0</span> sold</span
+									>
+								</div>
+							</div>
+							<!-- wrapper for header hiding toggle-->
+							<div class="horiz">
+								<div class="panel-emoji cT">💭</div>
+								<div class="panel-info">
+									<div class="cT">
+										<span class="info money" id="pay-synopsis"
+											>Get paid: $pay</span
+										>
+									</div>
+									<div class="cT">
+										<button class="words buy-button" id="sell-synopsis">
+											<span id="sell-synopsis-text"> Use 130 words</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="outline-panel" class="product hidden">
+							<div class="panel-header toggle-header">
+								<div class="left-text">
+									<h3 class="white-text">Outlines</h3>
+								</div>
+								<div class="right-text">
+									<span class="heading-counter">
+										<span id="outline-count">0</span> sold</span
+									>
+								</div>
+							</div>
+							<div class="horiz">
+								<div class="panel-emoji cT">📋</div>
+								<div class="panel-info">
+									<div class="cT">
+										<span class="info money" id="pay-outline"
+											>Get paid: $pay</span
+										>
+									</div>
+									<div class="cT">
+										<button class="words buy-button" id="sell-outline">
+											<span id="sell-outline-text">Use 20 words</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="treatment-panel" class="product hidden">
+							<div class="panel-header toggle-header">
+								<div class="left-text">
+									<h3 class="white-text">Treatments</h3>
+								</div>
+								<div class="right-text">
+									<span class="heading-counter">
+										<span id="treatment-count">0</span> sold</span
+									>
+								</div>
+							</div>
+							<div class="horiz">
+								<div class="panel-emoji cT">🗒️</div>
+								<div class="panel-info">
+									<div class="cT">
+										<span class="info money" id="pay-treatment"
+											>Get paid: $pay</span
+										>
+									</div>
+									<div class="cT">
+										<button class="words buy-button" id="sell-treatment">
+											<span id="sell-treatment-text">Use 20 words</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="script-panel" class="product hidden">
+							<div class="panel-header toggle-header">
+								<div class="left-text">
+									<h3 class="white-text">Scripts</h3>
+								</div>
+								<div class="right-text">
+									<span class="heading-counter">
+										<span id="script-count">0</span> sold</span
+									>
+								</div>
+							</div>
+							<div class="horiz">
+								<div class="panel-emoji cT">📑</div>
+								<div class="panel-info">
+									<div class="cT">
+										<span class="info money" id="pay-script"
+											>Get paid: $pay</span
+										>
+									</div>
+									<div class="cT">
+										<button class="words buy-button" id="sell-script">
+											<span id="sell-script-text">Use 20 words</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="divE2" class="three-part vert">
+						<div id="hire-people-header" class="section-header hidden">
+							<h3 class="cT">Hire People</h3>
+						</div>
+						<div id="script-doctor-panel" class="product hidden">
+							<div class="panel-header toggle-header golden">
+								<div class="left-text">
+									<h3 class="black-text">Script Doctors</h3>
+								</div>
+								<div class="right-text">
+									<span class="heading-counter black-text"
+										><span id="script-doctor">0</span></span
+									>
+								</div>
+							</div>
+							<!-- wrapper for header hiding toggle-->
+							<div class="horiz">
+								<div class="panel-emoji cT">👩‍⚕️</div>
+								<div class="panel-info">
+									<div class="cT">
+										<span class="info words" id="script-doctor-effect"
+											>Writer speed x1.4</span
+										>
+									</div>
+									<div class="cT">
+										<button class="money buy-button" id="hire-script-doctor">
+											<span id="hire-script-doctor-text"> $400</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="intern-panel" class="product hidden">
+							<div class="panel-header toggle-header">
+								<div class="left-text">
+									<h3 class="white-text">Interns</h3>
+								</div>
+								<div class="right-text">
+									<span class="heading-counter"
+										><span id="intern">0</span></span
+									>
+								</div>
+							</div>
+							<!-- wrapper for header hiding toggle-->
+							<div class="horiz">
+								<div class="panel-emoji cT">🙋</div>
+								<div class="panel-info">
+									<div class="cT">
+										<span class="info words" id=""
+											>+<span id="intern-wpm">10 words per second</span> for
+											<span id="intern-duration">30 seconds</span> 🕓</span
+										>
+									</div>
+									<div class="cT">
+										<button class="money buy-button" id="hire-intern">
+											<span id="hire-intern-text"> Hire for $10</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="junior-panel" class="product hidden">
+							<div class="panel-header toggle-header">
+								<div class="left-text">
+									<h3 class="white-text">Junior Writers</h3>
+								</div>
+								<div class="right-text">
+									<span class="heading-counter">
+										<span id="junior">0</span>
+									</span>
+								</div>
+							</div>
+							<div class="horiz">
+								<div class="panel-emoji cT">🧑‍💻</div>
+								<div class="panel-info">
+									<div class="cT">
+										<span class="info words"
+											>+<span id="junior-wpm">12 words per second</span> for
+											<span id="junior-duration">1 min</span> 🕓</span
+										>
+									</div>
+									<div class="cT">
+										<button class="money buy-button" id="hire-junior">
+											<span id="hire-junior-text">Hire for $130</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="screenwriter-panel" class="product hidden">
+							<div class="panel-header toggle-header">
+								<div class="left-text">
+									<h3 class="white-text">Screenwriters</h3>
+								</div>
+								<div class="right-text heading-counter">
+									<span id="screenwriter-count">0</span>
+								</div>
+							</div>
+							<div class="horiz">
+								<div class="panel-emoji cT">🧑‍💼</div>
+								<div class="panel-info">
+									<div class="cT">
+										<span class="info words"
+											>+<span id="screenwriter-wpm">24 words per second</span>
+											for
+											<span id="screenwriter-duration">5 mins</span> 🕓</span
+										>
+									</div>
+									<div class="cT">
+										<button class="money buy-button" id="hire-screenwriter">
+											<span id="hire-screenwriter-text">Hire for $300</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="cowriters-panel" class="product hidden">
+							<div class="panel-header toggle-header">
+								<div class="left-text">
+									<h3 class="white-text">Cowriters</h3>
+								</div>
+								<div class="right-text heading-counter">
+									<span id="cowriters-count">0</span>
+								</div>
+							</div>
+							<div class="horiz">
+								<div class="panel-emoji cT">👥</div>
+								<div class="panel-info">
+									<div class="cT">
+										<span class="info words"
+											>+<span id="cowriters-wpm">40 words per second</span> for
+											<span id="cowriters-duration">15 mins</span> 🕓</span
+										>
+									</div>
+									<div class="cT">
+										<button class="money buy-button" id="hire-cowriters">
+											<span id="hire-cowriters-text">Hire for $3000</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
