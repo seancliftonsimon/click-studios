@@ -831,10 +831,10 @@ document.addEventListener(
 				event.preventDefault();
 			}
 		}
-		if (event.code === "KeyM") {
+		/*if (event.code === "KeyM") {
 			numDollars += 1000;
 			updateDollarsText();
-		}
+		} */
 	},
 	false
 );
